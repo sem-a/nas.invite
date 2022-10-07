@@ -1,0 +1,187 @@
+@font-face {
+	font-family: 'Malina'; 
+	src: url(../fonts/Malina.otf); 
+}
+/* font-family: 'Montserrat', sans-serif; */
+
+.wrapper {
+    min-height: 100%;
+}
+/*-------------------*/
+.page {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.page__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.page__screen {
+    
+}
+.page__pagination {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translate(0px, -50%);
+    display: flex;
+    flex-direction: column;
+}
+.page__bullet {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 10px 0;
+    border-radius: 50%;
+    transition: background-color 0.3s ease 0s;
+}
+.page__bullet_active {
+    background-color: white;
+}
+.page__scroll{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+}
+.page__drag-scroll {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+/*--------------------*/
+.screen {
+    flex: 1 0 100%;
+    position: relative;  
+}
+.screen__content {
+    padding: 0 100px;
+    z-index: 2;
+}
+/* Первый экран */
+.screen__first {
+    background-color: #EFE9E0;
+}
+.screen__title {
+    font-family: 'Malina';
+    font-size: 36px;
+    color: #443133;
+}
+.title__h1 {
+    font-size: 40px;
+    text-align: center;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.first__image {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+.first__image img {
+}
+.first__button {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+a.button__open {
+    font-family: 'Malina';
+    font-size: 20px;
+    color: #CDC6BB;
+    background-color: white;
+    padding: 51px 16px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+a.button__open:hover {
+    background-color: #CDC6BB;
+    color: white;
+    transition: 0.5s;
+}
+/*--------------------------*/
+/* Второй экран */
+.screen__second {
+    background-color: #B6EFF7;
+}
+.second__flex {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+.second__flex-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.second__h2 {
+    width: 158px;
+    text-align: center;
+}
+.second__title-color {
+    color: #3CB7C6;
+}
+.second__text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #443133;
+    text-align: center;
+    margin-top: 10px;
+    width: 297px;
+}
+.second__text-weight {
+    font-weight: 600;
+}
+.second__button {
+    margin-top: 50px;
+}
+a.button__order {
+    font-family: 'Malina';
+    font-size: 20px;
+    color: #3CB7C6;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: white;
+    transition: .5s;
+}
+a.button__order:hover {
+    background-color: #3CB7C6;
+    color: White;
+    transition: .5s;
+}
+.second__image {
+    margin-left: 100px;
+}
+/*--------------------------*/
+/* Третий экран */
+.screen__third {
+    background-color: #FCE4A4;
+}
+/*--------------------------*/
+/* Четвертый экран */
+.screen__fourth {
+    background-color: #EFE9E0;
+}
+/*--------------------------*/
