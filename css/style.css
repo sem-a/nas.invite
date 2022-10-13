@@ -179,6 +179,43 @@ a.button__order:hover {
 .screen__third {
     background-color: #FCE4A4;
 }
+.third__h2 {
+    text-align: center;
+    margin-bottom: 100px;
+}
+.third__grid {
+    margin-top: 140px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.third__text {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+/* .third__text-flex {
+    display: flex;
+    justify-content: flex-end;
+} */
+.third__text p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #443133;
+    width: 440px;
+}
+.third__text-span {
+    font-weight: 700;
+}
+.third__line {
+    position: absolute;
+    width: 2px;
+    height: 400px;
+    background-color: #443133;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 /*--------------------------*/
 /* Четвертый экран */
 .screen__fourth {
