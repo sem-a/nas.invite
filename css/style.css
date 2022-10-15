@@ -193,10 +193,6 @@ a.button__order:hover {
     display: flex;
     justify-content: center;
 }
-/* .third__text-flex {
-    display: flex;
-    justify-content: flex-end;
-} */
 .third__text p {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
@@ -221,4 +217,194 @@ a.button__order:hover {
 .screen__fourth {
     background-color: #EFE9E0;
 }
+.fourth__h2 {
+    text-align: center;
+    margin-top: 100px;
+}
+.fourth__form-item {
+    text-align: center;
+    margin-top: 40px;
+}
+input.fourth__form-input {
+    font-size: 20px;
+    font-family: 'Malina';
+    color: #443133;
+    text-align: center;
+    width: 400px;
+    border-bottom: 2px solid #443133;
+    background-color: #EFE9E0;
+}
+.fourth__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
+}
+.fourth__card-flex {
+    display: flex;
+    justify-content: center;
+}
+.fourth__card {
+    background-color: white;
+    width: 220px;
+    height: 300px;
+    border-radius: 20px;
+    position: relative;
+}
+.fourth__card-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.fourth__card-title h3{
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    color: #443133;
+    text-align: center;
+}
+.fourth__card-items {
+    margin-top: 20px;
+}
+.fourth__card-item p{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    color: #443133;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.fourth__card-price p{
+    font-size: 24px;
+    font-family: "Malina";
+    color: #443133;
+    text-align: center;
+}
+.card__price-span {
+    font-size: 14px;
+}
+.fourth__card-button {
+    text-align: center;
+    margin-top: 10px;
+}
+.fourth__card-button button{
+    font-size: 20px;
+    font-family: "Malina";
+    color: white;
+    text-align: center;
+    background-color: #CDB186;
+    padding: 5px 28px;
+    border-radius: 50px;
+}
+.fourth__checkbox-container {
+    align-items: center;
+    position: relative;
+}
+.fourth__checkbox-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+label.fourth__form-label {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    color: #443133;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+input.fourth__form-checkbox {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+.fourth__form-label::before {
+    content: '';
+    display: inline-flex;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    box-shadow: #4431336c 0px 0px 2px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.fourth__form-label::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #CDB186;
+    border-radius: 2px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transform: scale(0);
+    transition: transform 0.5s ease 0s;
+}
+.fourth__form-checkbox:checked + .fourth__form-label::after {
+    transform: scale(1);
+    transition: transform 0.5s ease 0s;
+}
+.fourth__checkbox-item p {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    color: #443133;
+}
+.fourth__form-total {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.total__title p {
+    font-size: 40px;
+    font-family: 'Malina';
+    color: #443133;
+}
+.total__price p {
+    font-size: 40px;
+    font-family: 'Malina';
+    color: #443133;
+}
+.total__price-span {
+    font-size: 24px;
+}
+.fourth__form-button {
+    text-align: center;
+}
+.fourth__form-button button{
+    font-size: 32px;
+    font-family: "Malina";
+    color: white;
+    text-align: center;
+    background-color: #CDB186;
+    padding: 10px 40px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin-top: 40px;
+}
+.fourth__form-button button:hover {
+    background-color: white;
+    color: #CDB186;
+    transition: 0.5s;
+}
+.fourth__footer {
+    margin-top: 40px;
+}
+.footer__text p {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    color: #443133; 
+    text-align: center;
+    margin-bottom: 10px;
+}
+.footer__text-span {
+    font-weight: 600;
+}
+
 /*--------------------------*/
