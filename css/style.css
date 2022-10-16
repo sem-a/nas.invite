@@ -249,7 +249,28 @@ input.fourth__form-input {
     height: 300px;
     border-radius: 20px;
     position: relative;
+    transition: all 0.3s ease 0s;
 }
+
+input.fourth__card-checkbox {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+label.fourth__card-label {
+    background-color: white;
+    width: 220px;
+    height: 300px;
+    border-radius: 20px;
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+.fourth__card-checkbox:checked + .fourth__card-label {
+    box-shadow: 0px 0px 20px #CDB186;
+    transition: all 0.3s ease 0s;
+}
+
+
 .fourth__card-container {
     position: absolute;
     top: 50%;

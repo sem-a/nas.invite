@@ -55,3 +55,21 @@ let pageSlider = new Swiper('.page', {
 // Мой скрипт
 
 
+
+// Скрипт калькулятора цены
+check = document.getElementById('cardCheckbox');
+let totalSumm = 0;
+if(check.checked) {
+    totalSumm = 500;
+} else {
+    totalSumm = 0;
+}
+document.getElementById('totalSumm').innerHTML = totalSumm;
+function calculatorPrice(item) {
+    if (item.checked) {
+        totalSumm += parseInt(item.value);
+    } else {
+        totalSumm -= parseInt(item.value);
+    }
+    document.getElementById('totalSumm').innerHTML = totalSumm;
+}
