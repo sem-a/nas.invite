@@ -251,7 +251,6 @@ input.fourth__form-input {
     position: relative;
     transition: all 0.3s ease 0s;
 }
-
 input.fourth__card-checkbox {
     position: absolute;
     opacity: 0;
@@ -269,8 +268,6 @@ label.fourth__card-label {
     box-shadow: 0px 0px 20px #CDB186;
     transition: all 0.3s ease 0s;
 }
-
-
 .fourth__card-container {
     position: absolute;
     top: 50%;
@@ -429,3 +426,29 @@ input.fourth__form-checkbox {
 }
 
 /*--------------------------*/
+
+
+@media screen and (max-height: 750px) {
+    .title__h1 {
+        top: 5%;
+    }
+    .fourth__h2 {
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .screen__content {
+        padding: 0 20px;
+        z-index: 2;
+    }
+    .third__text p {
+        font-size: 20px;
+        width: 350px;
+    }
+    .page__pagination {
+        display: none;
+    }
+    .second__image img {
+        width: 200px;
+    }
+}
