@@ -1,0 +1,48 @@
+@media screen and (max-width: 390px) {
+    .second__flex {
+        flex-direction: column;
+    }
+    .second__image {
+        margin-left: 0px;
+        margin-top: 40px;
+    }
+    .second__image img {
+        width: 150px;
+    }
+    .third__line {
+        display: none;
+    }
+    .third__grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+    }
+    .third__text {
+        text-align: center;
+    }
+    .mobile {
+        display: none;
+    }
+    .fourth__h2 {
+        margin-top: 40px;
+        font-size: 30px;
+    }
+    input.fourth__form-input {
+        font-size: 20px;
+        width: 300px;
+    }
+    .fourth__grid {
+        display: flex;
+        flex-direction: column;
+    }
+    .fourth__card {
+        height: 250px;
+    }
+    .fourth__card-title h3 {
+        font-size: 16px;
+    }
+    label.fourth__card-label {
+        height: 250px;
+    }
+}
