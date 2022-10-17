@@ -1,5 +1,5 @@
 let screenWidth = window.innerWidth;
-if (screenWidth > 0) {
+if (screenWidth > 390) {
     let pageSlider = new Swiper('.page', {
         // Свои классы
         wrapperClass: 'page__wrapper',
@@ -53,11 +53,7 @@ if (screenWidth > 0) {
 }
 
 
-// Мой скрипт
 
-
-
-// Скрипт калькулятора цены
 check = document.getElementById('cardCheckbox');
 let totalSumm = 0;
 if(check.checked) {

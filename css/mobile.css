@@ -1,48 +1,38 @@
 @media screen and (max-width: 390px) {
-    .second__flex {
-        flex-direction: column;
+
+    .page {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: auto;
     }
-    .second__image {
-        margin-left: 0px;
-        margin-top: 40px;
+    .page__wrapper {
+        display: block;
+        width: 100%;
+        height: 100%;
     }
-    .second__image img {
-        width: 150px;
+    .screen {
+        flex: 0;
+        position: relative;  
     }
-    .third__line {
+    .screen__content {
+        padding: 0px;
+        z-index: 0;
+    }
+
+    .first__image {
         display: none;
     }
-    .third__grid {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-self: center;
-    }
-    .third__text {
-        text-align: center;
+    .second__image {
+        display: none;
     }
     .mobile {
         display: none;
     }
-    .fourth__h2 {
-        margin-top: 40px;
-        font-size: 30px;
+    .page__scroll {
+        display: none;
     }
-    input.fourth__form-input {
-        font-size: 20px;
-        width: 300px;
-    }
-    .fourth__grid {
-        display: flex;
-        flex-direction: column;
-    }
-    .fourth__card {
-        height: 250px;
-    }
-    .fourth__card-title h3 {
-        font-size: 16px;
-    }
-    label.fourth__card-label {
-        height: 250px;
-    }
+
 }
