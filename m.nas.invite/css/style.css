@@ -1,0 +1,123 @@
+@font-face {
+	font-family: 'Malina'; 
+	src: url(../../fonts/Malina.otf); 
+}
+/* font-family: 'Montserrat', sans-serif; */
+.screen__first {
+	background-color: #EFE9E0;
+	height: 100vh;
+	position: relative;
+}
+.screen__content-first {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.screen__title {
+    font-family: 'Malina';
+    font-size: 36px;
+    color: #443133;
+}
+.title__h1 {
+    font-size: 36px;
+    text-align: center;
+}
+.first__image {
+	margin-top: 30px;
+	text-align: center;
+}
+.first__image img{
+	width: 50%;
+}
+.first__button {
+	margin-top: 80px;
+	text-align: center;
+}
+a.button__open {
+    font-family: 'Malina';
+    font-size: 20px;
+    color: #CDC6BB;
+    background-color: white;
+    padding: 51px 16px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+/*------------------------*/
+.screen__second {
+	height: 100vh;
+	background-color: #B6EFF7;
+    position: relative;
+}
+.second__flex {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.second__flex-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.second__h2 {
+    width: 158px;
+    text-align: center;
+}
+.second__title-color {
+    color: #3CB7C6;
+}
+.second__text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #443133;
+    text-align: center;
+    margin-top: 20px;
+    width: 297px;
+}
+.second__text-weight {
+    font-weight: 600;
+}
+.second__button {
+    margin-top: 100px;
+}
+a.button__order {
+    font-family: 'Malina';
+    font-size: 36px;
+    color: #3CB7C6;
+    padding: 20px 40px;
+    border-radius: 50px;
+    background-color: white;
+    transition: .5s;
+}
+/*------------------------------*/
+.screen__third {
+	height: 100vh;
+    background-color: #FCE4A4;
+}
+.third__h2 {
+    text-align: center;
+    margin-bottom: 100px;
+}
+.third__text {
+    margin-top: 20px;
+}
+.third__text p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #443133;
+    text-align: center;
+}
+.third__text-span {
+    font-weight: 700;
+}
+.third__line {
+	display: none;
+}
+/*---------------------*/
+.screen__fourth {
+    background-color: #EFE9E0;
+	height: 100vh;
+}

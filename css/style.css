@@ -93,8 +93,6 @@
     transform: translateX(-50%);
     bottom: 0;
 }
-.first__image img {
-}
 .first__button {
     position: absolute;
     bottom: 70px;
