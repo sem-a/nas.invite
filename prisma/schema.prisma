@@ -1,0 +1,36 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Invitation {
+  id              String   @id @default(uuid())
+  wife            String
+  husband         String
+  place           String
+  wedding_date    DateTime
+  invitation_text String
+  event_steps     Json[]
+  // {
+  //   id: 1, 
+  //   time: '09:45:10 06.11.2024', 
+  //   title: 'Сбор гостей', 
+  //   description: 'В 9:45 ждем наших гостей  возле...',
+  //   img_url: 'https://image.ru/kartinka-dlya-svadbi'
+  //  }
+  dresscode       Json // {colors: ['#000', '#111']}
+  questions       Json[] // {id: 1, question: 'Вопрос?', answer: 'Ответ'}
+  presence_text   String
+  presence        Json[] // {id: 1, name: 'Денис и Алина', presence: true}
+  created_at      DateTime @default(now())
+}
