@@ -20,17 +20,23 @@ model Invitation {
   place           String
   wedding_date    DateTime
   invitation_text String
-  event_steps     Json[]
+  event_steps     Json
   // {
   //   id: 1, 
-  //   time: '09:45:10 06.11.2024', 
+  //   time: '2023-10-01T12:00:00Z', 
   //   title: 'Сбор гостей', 
   //   description: 'В 9:45 ждем наших гостей  возле...',
   //   img_url: 'https://image.ru/kartinka-dlya-svadbi'
   //  }
   dresscode       Json // {colors: ['#000', '#111']}
-  questions       Json[] // {id: 1, question: 'Вопрос?', answer: 'Ответ'}
+  questions       Json // {id: 1, question: 'Вопрос?', answer: 'Ответ'}
   presence_text   String
-  presence        Json[] // {id: 1, name: 'Денис и Алина', presence: true}
   created_at      DateTime @default(now())
+}
+
+model Presence {
+  id String @id @default(uuid())
+  name String
+  presence Boolean
+  invitation_id String
 }
