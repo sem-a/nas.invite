@@ -40,3 +40,11 @@ model Presence {
   presence Boolean
   invitation_id String
 }
+
+model Users { 
+  id String @id @default(uuid())
+  name String
+  email String
+  password String
+  confirmed Boolean @default(false)
+}       
