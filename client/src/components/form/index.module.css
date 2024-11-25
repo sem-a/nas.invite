@@ -1,0 +1,38 @@
+.formContainer {
+    max-width: 400px; 
+    margin: auto;
+}
+.label {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+.ant-form-item {
+    margin-bottom: 8px; /* Измените значение на нужное вам */
+}
+.inputField,
+.passwordField {
+    margin-top: 0;
+    border-radius: 7px; 
+    font-size: 21px;
+}
+
+.inputField:hover,
+.passwordField:hover {
+    border-color: #40a9ff;
+}
+
+.inputField::placeholder,
+.passwordField::placeholder {
+    color: #bfbfbf;
+}
+
+.primaryButton {
+   background-color: #4361EE;
+   border-color: transparent;
+   color: white;
+}
+
+.primaryButton:hover {
+   background-color: #4361EE;
+}

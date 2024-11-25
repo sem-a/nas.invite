@@ -7,7 +7,10 @@ const prisma = new PrismaClient();
 
 const sendEmail = async (email, verificationToken) => {
   const transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: "smtp.mail.ru",
+    port: 587,
+    secure: false, // true для порта 465; false - порт 587
+    service: "mail",
     auth: {
       user: process.env.EMAIL_LOGIN,
       pass: process.env.EMAIL_PASS,
@@ -23,6 +26,7 @@ const sendEmail = async (email, verificationToken) => {
 
   try {
     await transporter.sendMail(mailOprions);
+    return true;
   } catch (error) {
     console.error("Ошибка отправки письма:", error);
     throw new Error("Не удалось отправить письмо");
@@ -43,7 +47,7 @@ const verify = async (req, res) => {
 
     const user = await prisma.users.findUnique({
       where: {
-        id: decodedToken,
+        id: decodedToken.id,
       },
     });
 
@@ -106,9 +110,18 @@ const reg = async (req, res) => {
     });
 
     const secret = process.env.JWT_SECRET;
-    const token = jwt.sign({ id: user.id }, secret, { expiresIn: "30d" })
+    const token = jwt.sign({ id: user.id }, secret, { expiresIn: "30d" });
 
-    await sendEmail(email, token)
+    const sended = await sendEmail(email, token).catch(async () => {
+      const del = await prisma.users.delete({
+        where: {
+          id: user.id,
+        },
+      });
+      return res
+        .status(403)
+        .json({ message: "Не удалось отправить письмо на указанный Email" });
+    });
 
     if (user && secret)
       res.status(201).json({
@@ -151,6 +164,11 @@ const login = async (req, res) => {
     isPasswordCorrect = user && (await bcrypt.compare(password, user.password));
     const secret = process.env.JWT_SECRET;
 
+    isActive = user.confirmed;
+
+    if (!isActive)
+      return res.status(403).json({ message: "Аккаунт не активирован!" });
+
     if (user && isPasswordCorrect)
       res.status(200).json({
         id: user.id,
@@ -166,8 +184,32 @@ const login = async (req, res) => {
   }
 };
 
+/**
+ * @route POST /api/user/del
+ * @desc Удаление пользователя
+ * @access Private
+ */
+const del = async (req, res) => {
+  const { id } = req.body;
+
+  try {
+    const deleted = await prisma.users.delete({
+      where: {
+        id,
+      },
+    });
+
+    return res.status(200).json({ message: "Пользователь успешно удален!" });
+  } catch (error) {
+    return res
+      .status(500)
+      .json({ message: `Произошла ошибка на сервере! ${error.message}` });
+  }
+};
+
 module.exports = {
   reg,
   login,
-  verify
+  verify,
+  del,
 };
